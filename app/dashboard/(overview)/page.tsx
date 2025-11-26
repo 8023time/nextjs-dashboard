@@ -1,11 +1,16 @@
-import RevenueChart from "@/app/ui/dashboard/revenue-chart";
-import LatestInvoices from "@/app/ui/dashboard/latest-invoices";
-import { lusitana } from "@/app/ui/fonts";
+import { Metadata } from "next";
 import { Suspense } from "react";
-import { RevenueChartSkeleton } from "@/app/ui/skeletons";
-import { LatestInvoicesSkeleton } from "@/app/ui/skeletons";
-import CardWrapper from "@/app/ui/dashboard/cards";
+import { lusitana } from "@/app/ui/fonts";
 import { CardsSkeleton } from "@/app/ui/skeletons";
+import CardWrapper from "@/app/ui/dashboard/cards";
+import { RevenueChartSkeleton } from "@/app/ui/skeletons";
+import RevenueChart from "@/app/ui/dashboard/revenue-chart";
+import { LatestInvoicesSkeleton } from "@/app/ui/skeletons";
+import LatestInvoices from "@/app/ui/dashboard/latest-invoices";
+
+export const metadata: Metadata = {
+  title: "概览",
+};
 
 export default async function Page() {
   return (

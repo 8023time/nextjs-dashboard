@@ -1,7 +1,12 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Form from "@/app/ui/invoices/edit-form";
 import Breadcrumbs from "@/app/ui/invoices/breadcrumbs";
 import { fetchCustomers, fetchInvoiceById } from "@/app/lib/data";
+
+export const metadata: Metadata = {
+  title: "编辑发票",
+};
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
